@@ -1,88 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+<title>CSS Website Layout</title>
+<link rel="stylesheet" href="./block9.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
 
+body {
+  margin: 0;
+}
 
-    <link rel="stylesheet" href="block9.css">
+Style the header
+.header {
+  background-color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+}
 
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 15px;
+}
+
+/* Clear floats after the columns */
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width:600px) {
+  .column {
+    width: 100%;
+  }
+}
+</style>
 </head>
-
 <body>
-    <header>
-        <div class="name">Isaiah Pavia-Cruz</div>
-        <div class="topnav">
-            
-            <a href="portfolio.html">PORTFOLIO</a>
-            <a href="about.html">ABOUT</a>
-            <a href="block9.html">HOME</a>
-          </div>
-          
-    
-    </header>
 
-    <div>
-        <span class="d">     
-            <section>
-                <h2>Things I've built, in no particular order</h2> <hr>
-            </section>
-
-                    
-            <section>
-                <h2>The First Project</h2>
-                
-                    <img align="right"; style="width:250px;height: 100px"; src="https://www.liquidplanner.com/wp-content/uploads/2019/04/HiRes-17.jpg">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi at earum fuga harum alias nobis, eaque optio laudantium dolor sed eligendi consequatur distinctio aperiam accusantium, architecto exercitationem perferendis minus error.
-                        <br><br>Fuga dolore impedit suscipit, vero odit, sequi in deleniti, odio ipsa facere et. Consequatur modi cum ullam adipisci unde amet qui sed odio officia ipsa omnis earum quibusdam, dolor totam?</p>
-                        <br><hr>
-                    </span>
-        </div>
-                
-            </section>
-
-            <!-- SECOND PROJECT -->
+    <div class="header">
+        <h1>Isaiah Pavia-Cruz</h1>
+        <p>My Personal Website</p>
+      </div>
+      
+      <div class="topnav">
+        <a href="./index.html">Home</a>
+        <a href="./about.html">About</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="./contactform.html" style="float:right">Contact Form</a>
+      </div>
 
 
-    
-    <div>
-    <span class="d">
-        <section>
-
-        <h2>The Second Project</h2>
- 
-      <p><img align="left"; style="width:250px;height: 100px"; src="https://www.teachingexpertise.com/wp-content/uploads/2022/01/nature-crafts-800x600.jpg">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi at earum fuga harum alias nobis, eaque optio laudantium dolor sed eligendi consequatur distinctio aperiam accusantium, architecto exercitationem perferendis minus error. 
-     
-        <br><br>Fuga dolore impedit suscipit, vero odit, sequi in deleniti, odio ipsa facere et. Consequatur modi cum ullam adipisci unde amet qui sed odio officia ipsa omnis earum quibusdam, dolor totam?</p>
-     <br>
-     <hr>
- </span>
+<div class="row">
+  <div class="column">
+    <h2>Project 1</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+  </div>
+  
+  <div class="column">
+    <h2>Project 2</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+  </div>
+  
+  <div class="column">
+    <h2>Project 3</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+  </div>
 </div>
-</Section>
-
-<div>
-    <span class="d">
-                
-            
-    <Section>
-        <h2>The Third Project</h2>
-            
-                <img align="right"; style="width:250px;height: 100px"; src="https://tinyurl.com/2jcpye5x">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi at earum fuga harum alias nobis, eaque optio laudantium dolor sed eligendi consequatur distinctio aperiam accusantium, architecto exercitationem perferendis minus error.
-                <br><br>Fuga dolore impedit suscipit, vero odit, sequi in deleniti, odio ipsa facere et. Consequatur modi cum ullam adipisci unde amet qui sed odio officia ipsa omnis earum quibusdam, dolor totam?</p>
-                <br><hr>
-            </span>
-</div>
-        
-    </section>
-
-
-
-<footer>
-        <a href="https://facebook.com"><img style="width:48px; height:48px" src="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/facebook_circle_black-512.png"></a>
-        <a href="https://linkedin.com"><img style="width:48px; height:48px" src="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/linkedin_circle_black-512.png"></a>
-        <a href="https://twitter.com"><img style="width:48px; height:48px" src="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/twitter_circle_black-512.png"></a>
-    </footer>
+<div class="footer">
+    <a href="https://facebook.com"><img style="width:48px; height:48px" src="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/facebook_circle_black-512.png"></a>
+    <a href="https://linkedin.com"><img style="width:48px; height:48px" src="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/linkedin_circle_black-512.png"></a>
+    <a href="https://twitter.com"><img style="width:48px; height:48px" src="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/twitter_circle_black-512.png"></a>
+  </div>
 </body>
+</html>
+
+
